@@ -1,0 +1,29 @@
+<h2>Edit Vehicles</h2>
+    
+
+<%= form_with model: @vehicle, data:{turbo: false} do |f| %>
+    <%= f.label :brand, 'Brand'%>
+    <%= f.text_field :brand%>
+
+    <%= f.label :model, 'Model'%>
+    <%= f.text_field :model%>
+
+    <%= f.label :year, 'Year'%>
+    <%= f.number_field :year%>
+
+    <%= f.label :plate, 'Plate'%>
+    <%= f.text_field :plate%>
+
+    <%= f.label :kind, 'Kind'%>
+    <%= f.number_field :kind%>
+
+    <p><%= f.submit %></p>
+
+<%end%>
+<p><%= link_to 'Cancel', vehicles_path %></p>
+
+<% if @vehicle.errors.any?%>
+        <%@vehicle.errors.full_messages.each do |message|%>
+        <p><%=message%></p>
+        <%end%>
+    <%end%>

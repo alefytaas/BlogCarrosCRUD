@@ -1,0 +1,6 @@
+<h2>Veiculos </h2>
+    <p>Fabricante: <%= @vehicle.brand %> - Modelo: <%= @vehicle.model %> - Ano: <%= @vehicle.year %> - Plate: <%= @vehicle.plate %> - Kind: <%= @vehicle.kind %></p>
+
+<p><%= link_to 'Edit Vehicle', edit_vehicle_path(@vehicle) %></p>
+<p><%= link_to 'Destroy Vehicle', vehicle_path(@vehicle), data: { turbo_method: :delete }%></p>
+<p><%= link_to 'Back', vehicles_path %></p>

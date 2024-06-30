@@ -1,0 +1,10 @@
+<h2>Veiculos</h2>
+<% @vehicles.each do |vehicle|%>
+
+    <p>Fabricante: <%= vehicle.brand %> 
+    - Modelo: <%= vehicle.model %> - 
+    Ano: <%= vehicle.year %> - <%= link_to 'Detalhes',vehicle_path(vehicle)%> - <%= link_to 'Edit',edit_vehicle_path(vehicle)%> - <%= link_to 'Destroy Vehicle', vehicle_path(vehicle), data: { turbo_method: :delete , turbo_confirm: 'Registro será apagado!' }%></p>
+    <%end%>
+
+
+<p><%= link_to 'New Vehicle', new_vehicle_path %></p>

@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20240629134616_add_column_kind_to_vehicle.rb
